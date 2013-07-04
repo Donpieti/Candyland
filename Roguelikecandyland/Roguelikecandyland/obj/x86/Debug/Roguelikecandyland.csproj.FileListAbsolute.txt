@@ -1,5 +1,0 @@
-C:\Users\kawiegmann\Documents\Visual Studio 2010\Projects\Roguelikecandyland\Roguelikecandyland\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\kawiegmann\Documents\Visual Studio 2010\Projects\Roguelikecandyland\Roguelikecandyland\bin\Debug\Roguelikecandyland.exe
-C:\Users\kawiegmann\Documents\Visual Studio 2010\Projects\Roguelikecandyland\Roguelikecandyland\bin\Debug\Roguelikecandyland.pdb
-C:\Users\kawiegmann\Documents\Visual Studio 2010\Projects\Roguelikecandyland\Roguelikecandyland\obj\x86\Debug\Roguelikecandyland.exe
-C:\Users\kawiegmann\Documents\Visual Studio 2010\Projects\Roguelikecandyland\Roguelikecandyland\obj\x86\Debug\Roguelikecandyland.pdb
