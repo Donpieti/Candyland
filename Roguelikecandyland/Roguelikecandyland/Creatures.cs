@@ -22,7 +22,7 @@ namespace Roguelikecandyland
             {
                 Random richtung = new Random();
 
-                velocity += new Vector2(richtung.Next(-1, 1), richtung.Next(-1, 1)); // (x,y)
+                velocity += new Vector2(richtung.Next(-1, 2), richtung.Next(-1, 2)); // (x,y)
                 Console.SetCursorPosition(velocity.X, velocity.Y);
                 Console.WriteLine(creature);
                 Thread.Sleep(500);
