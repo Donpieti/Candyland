@@ -8,6 +8,9 @@ namespace Roguelikecandyland
 {
     public class Player
     {
+
+        // NUR das aussehen etc. für den Spieler, keine bewegung 
+
         private Vector2 oldPosition;
         private Vector2 position;
 
@@ -25,6 +28,8 @@ namespace Roguelikecandyland
 
         Playermovemente bewegung;
 
+        // Einbau von der Playerbewegung, was sich in einen anderen class befindet
+
         public Player(int x, int y)
         {
             position = new Vector2();
@@ -36,6 +41,8 @@ namespace Roguelikecandyland
 
         public void Render()
         {
+            // Spieleraussehen. In dem Fall: Sein Standpunkt ist auf X=0 Y=0 Farbe der Figur -> Cyan und sieht so aus-> ☻
+
             Console.SetCursorPosition(x, y);
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.Write('☻');
