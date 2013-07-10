@@ -36,18 +36,36 @@ namespace Roguelikecandyland
 
         public void Render()
         {
-            Console.SetCursorPosition(x, y);
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.Write('☻');
+            if (validmovement())
+            {
+                Console.SetCursorPosition(x, y);
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.Write('☻');
+            }
+        }
+
+        public Boolean validmovement()
+        {
+            if (GameManager.map.GetField(position.X+1,position.Y+1).Text == 'o')
+            {
+                return false;
+            }
+            else
+            { 
+                return true; 
+            }
         }
 
         public void Move()
         {
-            if(bewegung.Move(this))
+            if (bewegung.Move(this))
             {
-                GameManager.map.RenderField(oldPosition.X, oldPosition.Y);
-                oldPosition = new Vector2(position);
+                if (validmovement())
+                {
+                    GameManager.map.RenderField(oldPosition.X, oldPosition.Y);
+                    oldPosition = new Vector2(position);
+                }
             }
-        }        
+        }
     }
 }
