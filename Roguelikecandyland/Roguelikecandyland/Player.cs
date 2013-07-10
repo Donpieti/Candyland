@@ -48,6 +48,9 @@ namespace Roguelikecandyland
         {
             if (GameManager.map.GetField(position.X+1,position.Y+1).Text == 'o')
             {
+                Console.SetCursorPosition(oldPosition.X, oldPosition.Y);
+                x = oldPosition.X;
+                y = oldPosition.Y;
                 return false;
             }
             else
