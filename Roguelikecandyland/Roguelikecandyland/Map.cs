@@ -8,7 +8,7 @@ namespace Roguelikecandyland
 {
     public class Map
     {
-        private Field[,] map;
+        public Field[,] map;
 
         public readonly int Width;
         public readonly int Height;
@@ -41,10 +41,10 @@ namespace Roguelikecandyland
                 for (int c = 0; c < lines[line].Length; c++)
                 {
                     map[line, c].Text = lines[line].ToCharArray()[c];
-                    if (map[line, c].Text == ',')
+                    if (map[line, c].Text == 'o')
                     {
-                        map[line, c].Text = '.';
-                        map[line, c].Color = ConsoleColor.Red;
+                        map[line, c].Text = 'o';
+                        map[line, c].Color = ConsoleColor.White;
                     }
                 }
             }

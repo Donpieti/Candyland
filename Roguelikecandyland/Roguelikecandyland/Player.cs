@@ -41,20 +41,39 @@ namespace Roguelikecandyland
 
         public void Render()
         {
-            // Spieleraussehen. In dem Fall: Sein Standpunkt ist auf X=0 Y=0 Farbe der Figur -> Cyan und sieht so aus-> ☻
+            if (validmovement())
+            {
+                Console.SetCursorPosition(x, y);
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.Write('☻');
+            }
+        }
 
-            Console.SetCursorPosition(x, y);
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.Write('☻');
+        public Boolean validmovement()
+        {
+            if (GameManager.map.GetField(position.X+1,position.Y+1).Text == 'o')
+            {
+                Console.SetCursorPosition(oldPosition.X, oldPosition.Y);
+                x = oldPosition.X;
+                y = oldPosition.Y;
+                return false;
+            }
+            else
+            { 
+                return true; 
+            }
         }
 
         public void Move()
         {
-            if(bewegung.Move(this))
+            if (bewegung.Move(this))
             {
-                GameManager.map.RenderField(oldPosition.X, oldPosition.Y);
-                oldPosition = new Vector2(position);
+                if (validmovement())
+                {
+                    GameManager.map.RenderField(oldPosition.X, oldPosition.Y);
+                    oldPosition = new Vector2(position);
+                }
             }
-        }        
+        }
     }
 }
