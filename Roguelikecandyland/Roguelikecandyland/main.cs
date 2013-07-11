@@ -14,8 +14,11 @@ namespace Roguelikecandyland
             Console.CursorVisible = false;
             while (true)
             {
+                Console.SetCursorPosition(GameManager.player.x, GameManager.player.y);
                 GameManager.player.Move();
                 GameManager.player.Render();
+                
+               
                
             }
 

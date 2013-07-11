@@ -32,10 +32,8 @@ namespace Roguelikecandyland
 
         public Player(int x, int y)
         {
-            position = new Vector2();
-            oldPosition = new Vector2();
-            this.x = x;
-            this.y = y;
+            position = new Vector2(x, y);
+            oldPosition = new Vector2(x, y);
             bewegung = new Playermovemente();
         }
 
@@ -69,7 +67,7 @@ namespace Roguelikecandyland
             if (bewegung.Move(this))
             {
                 if (validmovement())
-                {
+                {      
                     GameManager.map.RenderField(oldPosition.X, oldPosition.Y);
                     oldPosition = new Vector2(position);
                 }
