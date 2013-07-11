@@ -8,6 +8,9 @@ namespace Roguelikecandyland
 {
     public class Player
     {
+
+        // NUR das aussehen etc. für den Spieler, keine bewegung 
+
         private Vector2 oldPosition;
         private Vector2 position;
 
@@ -24,6 +27,8 @@ namespace Roguelikecandyland
         }
 
         Playermovemente bewegung;
+
+        // Einbau von der Playerbewegung, was sich in einen anderen class befindet
 
         public Player(int x, int y)
         {
