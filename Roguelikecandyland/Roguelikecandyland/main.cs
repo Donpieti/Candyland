@@ -11,6 +11,7 @@ namespace Roguelikecandyland
         {
             GameManager gm = new GameManager();
             GameManager.map.Render();
+            Console.CursorVisible = false;
             while (true)
             {
                 GameManager.player.Move();
