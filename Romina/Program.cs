@@ -18,8 +18,6 @@ namespace ConsoleApplication1
            
             for (int i = 0; i <= 100; i++) 
             {
-                Random richtung = new Random();
-               
                 velocity += new Vector2(1, 1); // (x,y)
                 Console.SetCursorPosition(velocity.X, velocity.Y);
                 Console.WriteLine(creature);
