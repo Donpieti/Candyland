@@ -67,6 +67,7 @@ namespace Roguelikecandyland
             if (bewegung.Move(this))
             {
                 if (validmovement())
+                //if (!collision.wall(position.X,position.Y)) //<- noch nicht einsatzbereit
                 {      
                     GameManager.map.RenderField(oldPosition.X, oldPosition.Y);
                     oldPosition = new Vector2(position);
