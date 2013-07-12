@@ -13,7 +13,9 @@ namespace Roguelikecandyland
             Map map = new Map(58, 24);
             Player player = new Player(10, 10);
 
-            map.LoadFromFile(@"E:\Candyland\Patty\Text.txt");
+            string path = "Text.txt";
+            string fullPath = System.IO.Path.GetFullPath(path);
+            map.LoadFromFile(fullPath);
             map.Render();
             player.Render();
             Console.ReadKey();
